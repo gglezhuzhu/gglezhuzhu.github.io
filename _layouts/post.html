@@ -1,6 +1,51 @@
 ---
 layout: default
 ---
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to top, #F4A460, #4682B4, #87CEEB); /* 沙滩、大海、蓝天 */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+    }
+    .sun {
+        position: absolute;
+        top: 10%;
+        right: 10%; /* 调整到右上角 */
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        border-radius: 50%;
+        box-shadow: 0 0 50px rgba(255, 255, 0, 0.8);
+    }
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    p {
+        text-align: center;
+    }
+    .content {
+        background: rgba(255, 255, 255, 0.8);
+        color: black;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .footer {
+        height: 50px;
+        background: #F4A460; /* 沙滩颜色 */
+    }
+</style>
+
+<div class="sun"></div>
+
 <h1>{{ page.title }}</h1>
 
 <p>
@@ -11,4 +56,8 @@ layout: default
   {% endif %}
 </p>
 
-{{ content }}
+<div class="content">
+    {{ content }}
+</div>
+
+<div class="footer"></div>
